@@ -11,7 +11,7 @@ This application uses several AWS severvices including S3, Lambda, DynamoDB, API
 
 1) A NodeJS application streams raw data into an S3 bucket by using Kinesis Streams and Kinesis Firehose (batches of files every 1 minute).
 2) Once an object is put onto S3, it triggers a Lambda function. The Lambda function reads each objects and transforms the data so it can be inserted into a DynamoDB table (where the raw tweets are stored).
-3) Every record that is added to the DynamoDB table creates another Lambda function to trigger that sens the "tweet" to Amazon Comprehend where sentiment anaylsis is done. AWS Comprehend sends back a response wether the tweet was Postive, Netural, Negative, or Mixed. If the result was "NEGATIVE", another record is added to a seperate DynamoDB table (holding all the Negative repsonses from sentiment analysis). 
+3) Every record that is added to the raw tweets DynamoDB table triggers another Lambda function to send the tweet to Amazon Comprehend where sentiment anaylsis is done. AWS Comprehend sends back a response wether the tweet was Postive, Netural, Negative, or Mixed. If the result was "NEGATIVE", another record is added to a seperate DynamoDB table (holding all the Negative repsonses from sentiment analysis). 
 4) An API Gateway endpoint is setup to trigger another Lambda funciton to return all the values help withing the DynamoDB table hold the results from the sentiment analysis.
 
 
@@ -26,7 +26,7 @@ This challenege was part of Clemson's University event CUhackit 2019, held Janua
 
 ## Links
 
-Website: https://brocktubre.com
+Personal Website: https://brocktubre.com
 
 Portfolio: https://brocktubre.com/portfolio
 
