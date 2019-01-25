@@ -15,8 +15,8 @@ This application uses several AWS severvices including S3, Lambda, DynamoDB, API
 4) An API Gateway endpoint is setup to trigger another Lambda funciton to return all the values help withing the DynamoDB table hold the results from the sentiment analysis.
 
 
-## About CUHackit2019
-This challenege was part of Clemson's University event CUhackit 2019, held January 26th-27th. It is a student-led and run organization striving to provide the best hackathon experience possible. The event is welcome all hackers and creators to sign up and prepare to make something amazing!
+## About [CUHackit2019](https://cuhack.it/)
+This challenege was part of Clemson University's CUhackit 2019, held January 26th-27th, 2019. This is event is led by a student organization striving to provide the best hackathon experience possible. The event is welcome all hackers and creators to sign up and prepare to make something amazing!
 
 ### Some Screenshots
 
